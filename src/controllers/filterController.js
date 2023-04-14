@@ -7,6 +7,8 @@ exports.home = async function(req, res) {
 
 exports.filter = async function(req, res) {
     const textoMaiusculoDividido = req.body.texto.toUpperCase().split(' ');
+    const textoMaiusculoDivididoPorEnter = req.body.texto.toUpperCase().split('\r\n');
+    console.log(textoMaiusculoDividido);
 
     let conteudosImproprios = 0;
     let conteudosEncontrados = [];
@@ -16,7 +18,13 @@ exports.filter = async function(req, res) {
     ********/
     palavroesMaiusculo.forEach( palavrao => {
 
-        if( textoMaiusculoDividido.includes(palavrao) ){
+        if( textoMaiusculoDividido.includes(palavrao)){
+            palavraoCapitalizado = palavrao[0].toUpperCase() + palavrao.substring(1).toLowerCase();
+            conteudosImproprios++;
+            conteudosEncontrados.push(palavraoCapitalizado);
+        }
+        
+        if(textoMaiusculoDivididoPorEnter.includes(palavrao)){
             palavraoCapitalizado = palavrao[0].toUpperCase() + palavrao.substring(1).toLowerCase();
             conteudosImproprios++;
             conteudosEncontrados.push(palavraoCapitalizado);

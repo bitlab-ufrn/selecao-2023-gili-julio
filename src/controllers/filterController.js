@@ -8,7 +8,6 @@ exports.home = async function(req, res) {
 exports.filter = async function(req, res) {
     const textoMaiusculoDividido = req.body.texto.toUpperCase().split(' ');
     const textoMaiusculoDivididoPorEnter = req.body.texto.toUpperCase().split('\r\n');
-    console.log(textoMaiusculoDividido);
 
     let conteudosImproprios = 0;
     let conteudosEncontrados = [];

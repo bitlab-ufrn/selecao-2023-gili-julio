@@ -1,0 +1,16 @@
+extends layout
+
+
+block content
+  div(class="text-center container")
+
+    if quantidade > 1
+      h1(style="margin-bottom: 50px; margin-top: 50px; color: red;")= 'Foram encontrados ' + quantidade + ' conteúdos impróprios no seu texto!'
+    else
+      h1(style="margin-bottom: 50px; margin-top: 50px; color: red;")= 'Foi encontrado ' + quantidade + ' conteúdo impróprio no seu texto!'
+      
+    h3(style="color: orange; margin-bottom: 50px;")= 'Conteúdo detectado => [' + conteudos.join(', ') + ']'
+    h5(style="color: orange; margin-bottom: 50px;")= 'Texto enviado => [ ' + texto + ' ]'
+
+    a(href="/")
+      button(class="btn btn-danger" style="transform: scale(1.5);") Voltar

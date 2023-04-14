@@ -1,0 +1,12 @@
+extends layout
+
+
+block content
+  div(class="text-center container")
+
+    h1(style="margin-bottom: 50px; margin-top: 50px; color: green;")= 'Não foi encontrado nenhum conteúdo impróprio no seu texto!'
+
+    h5(style="color: blue; margin-bottom: 50px;")= 'Texto enviado => [ ' + texto + ' ]'
+
+    a(href="/")
+      button(class="btn btn-danger" style="transform: scale(1.5);") Voltar

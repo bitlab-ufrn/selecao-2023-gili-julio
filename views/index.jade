@@ -1,0 +1,9 @@
+extends layout
+
+
+block content
+  div(class="text-center container")
+    h1(style="margin-bottom: 50px; margin-top: 50px;")= title
+    form(action="/", method="post")
+      textarea(class="form-control" name="texto" rows="8" style="margin-bottom: 50px;")
+      input(class="btn btn-success" type="submit" value="Enviar" style="transform: scale(2);")

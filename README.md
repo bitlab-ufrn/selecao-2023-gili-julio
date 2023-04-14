@@ -33,4 +33,13 @@ Você está livre para utilizar qualquer linguagem ou ferramenta.
 1. Faça deploy para algum serviço de __cloud__ para que possamos acessar facilmente e testar sua aplicação. Sugestão https://vercel.com/
 1. Adicione a esse README instruções de acesso ao seu sistema
 
-## Acesso
+## Acesso pelo Render
+
+Para acessar pelo serviço do Render, basta acessar o link https://filtertext.onrender.com/ 
+
+## Acesso localmente
+
+1. Clone o repositório
+1. Instale as dependências com __npm install__, caso a pasta __node_modules__ não vá junto
+1. Para iniciar o projeto basta dar o comando __npm start__
+1. Agora só acessar por https://localhost:3000
